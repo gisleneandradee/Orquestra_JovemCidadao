@@ -1,276 +1,389 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A Orquestra Jovem Cidadão foi criada em 2005 para fortalecer a tradição musical e cultural de São José da Bela Vista.">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="Style.css">
-  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
-  <title>ORQUESTRA JOVEM CIDADÃO</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A Orquestra Jovem Cidadão foi criada em 2005 para fortalecer a tradição musical e cultural de São José da Bela Vista."
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="Style.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <title>ORQUESTRA JOVEM CIDADÃO</title>
+  </head>
+  <body>
+    <header class="navegacao">
+      <img
+        class="imagemHeader"
+        src="Images/logoHeader.jpeg"
+        alt="Logo da Orquestra Jovem Cidadão"
+      />
+      <button class="menu-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="menuNavegacao">
+        <a href="#inicio" class="menuNavegacaoItem">Início</a>
+        <a href="#sobre" class="menuNavegacaoItem">Sobre</a>
+        <a href="#professores" class="menuNavegacaoItem">Professores</a>
+        <a href="#agenda" class="menuNavegacaoItem">Agenda</a>
+        <a href="#galeria" class="menuNavegacaoItem">Galeria</a>
+      </nav>
+      <a href="#apoie" class="navegacaoBotao">Apoie</a>
+    </header>
 
-  <header class="navegacao">
-    <img class="imagemHeader" src="Images/logoHeader.jpeg" alt="Logo da Orquestra Jovem Cidadão">
-    <button class="menu-toggle" aria-label="Abrir menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <nav class="menuNavegacao">
-      <a href="#inicio" class="menuNavegacaoItem">Início</a>
-      <a href="#sobre" class="menuNavegacaoItem">Sobre</a>
-      <a href="#professores" class="menuNavegacaoItem">Professores</a>
-      <a href="#agenda" class="menuNavegacaoItem">Agenda</a>
-      <a href="#galeria" class="menuNavegacaoItem">Galeria</a>
-    </nav>
-
-    <a href="#apoie" class="navegacaoBotao">Apoie</a>
-  </header>
-
-  <main class="conteudo">
-
-    <section class="conteudoInicio" id="inicio">
-      <div class="conteudoInicioEscrito">
-        <h1 class="conteudoInicioTitulo">Orquestra Jovem Cidadão</h1>
-        <h2 class="conteudoInicioSubtitulo">Transformando vidas através da música!</h2>
-        <p class="conteudoInicioTexto">
-          Conheça a nossa orquestra, nossos projetos sociais e acompanhe nossas apresentações.
-        </p>
-        <div class="botoesInicio">
-          <a href="#sobre" class="conteudoInicioBotaoConheca">Conheça a Orquestra</a>
-          <a href="#contratacao" class="conteudoInicioContrate">Agende uma apresentação</a>
-        </div>
-      </div>
-      <div> 
-        <img class="conteudoInicioImagem" src="Images/imagemConteudoInicio.jpeg" alt="Membros da Orquestra Jovem Cidadão"> 
-      </div>
-    </section>
-
-    <section class="sobre" id="sobre">
-      <div class="sobreTextoBloco">
-        <h2 class="sobreConteudoTitulo">Sobre a Orquestra</h2>
-        <p class="sobreConteudoTexto">
-          O projeto social teve início no ano de 2003, em parceria com a prefeitura, com o objetivo de transformar vidas por meio da música. Desde então, atua de forma contínua como um espaço de acolhimento, desenvolvimento e inspiração para crianças, jovens e adolescentes.
-          <br><br>
-          Idealizado por Luis Claudio Argente Dutra, as aulas de violão são um exemplo de dedicação e compromisso com a transformação social. O projeto mantém-se ativo até os dias atuais, sendo referência na cidade de São José da Bela Vista como ferramenta de inclusão.
-          <br><br>
-          Com uma proposta sem fins lucrativos, buscamos proporcionar o acesso à música, contribuindo para a formação cidadã e a valorização do potencial criativo. Ao longo desses anos, centenas de jovens ampliaram seus horizontes e construíram novas perspectivas de vida.
-        </p>
-      </div>
-
-      <div class="sobreEstatisticas">
-        <div class="estatisticaItem">
-          <i class="ph ph-users"></i>
-          <h3 class="estatisticaNumero">+300</h3>
-          <p class="estatisticaTexto">Alunos</p>
-        </div>
-        <div class="estatisticaItem">
-          <i class="ph ph-calendar-blank"></i>
-          <h3 class="estatisticaNumero">+50</h3>
-          <p class="estatisticaTexto">Apresentações Realizadas</p>
-        </div>
-        <div class="estatisticaItem">
-          <i class="ph ph-heart"></i>
-          <h3 class="estatisticaNumero">+20</h3>
-          <p class="estatisticaTexto">Anos de história</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="professores" id="professores">
-      <h2 class="professoresTitulo">Nossos Professores</h2>
-      <div class="professoresLinha"></div> 
-      <div class="professoresContainer">
-        <div class="professorCard">
-          <div class="professorFotoContainer">
-            <img src="Images/professorClaudio.jpeg" alt="Professor Claudio" class="professorFoto">
+    <main class="conteudo">
+      <section class="conteudoInicio" id="inicio">
+        <div class="conteudoInicioEscrito">
+          <h1 class="conteudoInicioTitulo">Orquestra Jovem Cidadão</h1>
+          <h2 class="conteudoInicioSubtitulo">
+            Transformando vidas através da música!
+          </h2>
+          <p class="conteudoInicioTexto">
+            Conheça a nossa orquestra, nossos projetos sociais e acompanhe
+            nossas apresentações.
+          </p>
+          <div class="botoesInicio">
+            <a href="#sobre" class="conteudoInicioBotaoConheca"
+              >Conheça a Orquestra</a
+            >
+            <a href="#contratacao" class="conteudoInicioContrate"
+              >Agende uma apresentação</a
+            >
           </div>
-          <div class="professorInfo">
-            <h3 class="professorNome">Luiz Claudio</h3>
-            <p class="professorInstrumento">Maestro</p>
-            <p class="professorBio">Há 35 anos facilitando o aprendizado do violão para crianças, jovens e adultos.</p>
-            <div class="professorRedes">
-              <a href="https://www.instagram.com/clau.dio2129/" target="_blank"><i class="ph ph-instagram-logo"></i></a>
-              <a href="https://www.youtube.com/@professorclaudinho1296" target="_blank"><i class="ph ph-youtube-logo"></i></a>
+        </div>
+        <div>
+          <img
+            class="conteudoInicioImagem"
+            src="Images/imagemConteudoInicio.jpeg"
+            alt="Membros da Orquestra Jovem Cidadão"
+          />
+        </div>
+      </section>
+
+      <section class="sobre" id="sobre">
+        <div class="sobreTextoBloco">
+          <h2 class="sobreConteudoTitulo">Sobre a Orquestra</h2>
+          <p class="sobreConteudoTexto">
+            O projeto social teve início no ano de 2003, em parceria com a
+            prefeitura, com o objetivo de transformar vidas por meio da música.
+            Desde então, atua de forma contínua como um espaço de acolhimento,
+            desenvolvimento e inspiração para crianças, jovens e adolescentes.
+            <br /><br />
+            Idealizado por Luis Claudio Argente Dutra, as aulas de violão são um
+            exemplo de dedicação e compromisso com a transformação social. O
+            projeto mantém-se ativo até os dias atuais, sendo referência na
+            cidade de São José da Bela Vista como ferramenta de inclusão.
+            <br /><br />
+            Com uma proposta sem fins lucrativos, buscamos proporcionar o acesso
+            à música, contribuindo para a formação cidadã e a valorização do
+            potencial criativo. Ao longo desses anos, centenas de jovens
+            ampliaram seus horizontes e construíram novas perspectivas de vida.
+          </p>
+        </div>
+        <div class="sobreEstatisticas">
+          <div class="estatisticaItem">
+            <i class="ph ph-users"></i>
+            <h3 class="estatisticaNumero">+300</h3>
+            <p class="estatisticaTexto">Alunos</p>
+          </div>
+          <div class="estatisticaItem">
+            <i class="ph ph-calendar-blank"></i>
+            <h3 class="estatisticaNumero">+50</h3>
+            <p class="estatisticaTexto">Apresentações Realizadas</p>
+          </div>
+          <div class="estatisticaItem">
+            <i class="ph ph-heart"></i>
+            <h3 class="estatisticaNumero">+20</h3>
+            <p class="estatisticaTexto">Anos de história</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="professores" id="professores">
+        <h2 class="professoresTitulo">Nossos Professores</h2>
+        <div class="professoresLinha"></div>
+        <div class="professoresContainer">
+          <div class="professorCard">
+            <div class="professorFotoContainer">
+              <img
+                src="Images/professorClaudio.jpeg"
+                alt="Professor Claudio"
+                class="professorFoto"
+              />
+            </div>
+            <div class="professorInfo">
+              <h3 class="professorNome">Luiz Claudio</h3>
+              <p class="professorInstrumento">Maestro</p>
+              <p class="professorBio">
+                Há 35 anos facilitando o aprendizado do violão para crianças,
+                jovens e adultos.
+              </p>
+              <div class="professorRedes">
+                <a
+                  href="https://www.instagram.com/clau.dio2129/"
+                  target="_blank"
+                  ><i class="ph ph-instagram-logo"></i
+                ></a>
+                <a
+                  href="https://www.youtube.com/@professorclaudinho1296"
+                  target="_blank"
+                  ><i class="ph ph-youtube-logo"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="professorCard">
+            <div class="professorFotoContainer">
+              <img
+                src="Images/professorThallis.jpeg"
+                alt="Professor Thallis"
+                class="professorFoto"
+              />
+            </div>
+            <div class="professorInfo">
+              <h3 class="professorNome">Thallis Camargo</h3>
+              <p class="professorInstrumento">Professor</p>
+              <p class="professorBio">
+                Pedagogo em formação, há quase 10 anos ensinando música para
+                crianças e adolescentes
+              </p>
+              <div class="professorRedes">
+                <a
+                  href="https://www.instagram.com/thalliscamargo/"
+                  target="_blank"
+                  ><i class="ph ph-instagram-logo"></i
+                ></a>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="professorCard">
-          <div class="professorFotoContainer">
-            <img src="Images/professorThallis.jpeg" alt="Professor Thallis" class="professorFoto">
+      </section>
+      <section class="agenda" id="agenda">
+        <h2 class="agendaTitulo">Agenda de Eventos</h2>
+        <div class="agendaLinha"></div>
+        <div class="agendaContainer">
+          <div class="eventoCard">
+            <div class="eventoDataBox">
+              <span class="eventoDia">03</span>
+              <span class="eventoMes">JUN</span>
+            </div>
+            <div class="eventoDetalhes">
+              <h3 class="eventoNome">
+                Cerimônia de Abertura da Copa do Mundo de Futsal Base
+              </h3>
+              <p class="eventoInfo">18h00</p>
+              <p class="eventoInfo">
+                <i class="ph ph-map-pin"></i> Poliesportivo Municipal
+              </p>
+            </div>
           </div>
-          <div class="professorInfo">
-            <h3 class="professorNome">Thallis Camargo</h3>
-            <p class="professorInstrumento">Professor</p>
-            <p class="professorBio">Pedagogo em formação, há quase 10 anos ensinando música para crianças e adolescentes</p>
-            <div class="professorRedes">
-              <a href="https://www.instagram.com/thalliscamargo/" target="_blank"><i class="ph ph-instagram-logo"></i></a>
+          <div class="eventoCard">
+            <div class="eventoDataBox">
+              <span class="eventoDia">20</span>
+              <span class="eventoMes">SET</span>
+            </div>
+            <div class="eventoDetalhes">
+              <h3 class="eventoNome">Apresentação Beneficente</h3>
+              <p class="eventoInfo">19h30</p>
+              <p class="eventoInfo">
+                <i class="ph ph-map-pin"></i> Praça Central
+              </p>
+            </div>
+          </div>
+          <div class="eventoCard">
+            <div class="eventoDataBox">
+              <span class="eventoDia">10</span>
+              <span class="eventoMes">OUT</span>
+            </div>
+            <div class="eventoDetalhes">
+              <h3 class="eventoNome">III Festival de Orquestras</h3>
+              <p class="eventoInfo">20h00</p>
+              <p class="eventoInfo">
+                <i class="ph ph-map-pin"></i> Teatro Municipal
+              </p>
+            </div>
+          </div>
+          <div class="eventoCard">
+            <div class="eventoDataBox">
+              <span class="eventoDia">05</span>
+              <span class="eventoMes">DEZ</span>
+            </div>
+            <div class="eventoDetalhes">
+              <h3 class="eventoNome">Concerto de Natal</h3>
+              <p class="eventoInfo">20h00</p>
+              <p class="eventoInfo">
+                <i class="ph ph-map-pin"></i> Igreja São José
+              </p>
             </div>
           </div>
         </div>
+      </section>
+
+      <section class="galeria" id="galeria">
+        <h2 class="galeriaTitulo">Galeria</h2>
+        <div class="galeriaLinha"></div>
+        <div class="galeriaCarrossel">
+          <div class="galeriaItem">
+            <img src="Images/Foto1.jpg" alt="Apresentação da Orquestra 1" />
+          </div>
+          <div class="galeriaItem">
+            <video width="640" height="360" controls autoplay muted>
+              <source src="Images/Video1.mp4" type="video/mp4" />
+              Seu navegador não suporta este vídeo.
+            </video>
+          </div>
+          <div class="galeriaItem">
+            <img src="Images/foto2.jpg" alt="Apresentação da Orquestra 2" />
+          </div>
+          <div class="galeriaItem">
+            <img
+              src="Images/imagemConteudoInicio.jpeg"
+              alt="Apresentação da Orquestra 4"
+            />
+          </div>
+          <div class="galeriaItem">
+            <video width="640" height="360" controls autoplay muted>
+              <source src="Images/Video2.mp4" type="video/mp4" />
+              Seu navegador não suporta este vídeo.
+            </video>
+          </div>
+          <div class="galeriaItem">
+            <img
+              src="Images/imagemApoie.jpeg"
+              alt="Apresentação da Orquestra 3"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="contratacao" id="contratacao">
+        <div class="contratacaoInfo">
+          <h2 class="contratacaoTitulo">Agende uma Apresentação</h2>
+          <div class="contratacaoLinha"></div>
+          <p class="contratacaoSubtitulo">
+            Levamos música e emoção para o seu evento!
+          </p>
+          <ul class="contratacaoLista">
+            <li><i class="ph ph-check"></i> Formaturas</li>
+            <li><i class="ph ph-check"></i> Feriados</li>
+            <li><i class="ph ph-check"></i> Eventos culturais</li>
+          </ul>
+        </div>
+        <form
+          class="contratacaoForm"
+          action="https://formspree.io/f/xaqgovwo"
+          method="POST"
+        >
+          <div class="formGrid">
+            <input
+              type="text"
+              name="Nome"
+              placeholder="Nome completo"
+              required
+            />
+            <input type="email" name="Email" placeholder="E-mail" required />
+            <input type="tel" name="Telefone" placeholder="Telefone" />
+
+            <select name="Tipo_de_Evento" required>
+              <option value="" disabled selected>Tipo de evento</option>
+              <option value="formaturas">Formaturas</option>
+              <option value="feriados">Feriados</option>
+              <option value="culturais">Eventos culturais</option>
+            </select>
+
+            <input
+              type="text"
+              name="Data_do_Evento"
+              placeholder="Data do evento"
+              onfocus="this.type = 'date'"
+              onblur="this.type = 'text'"
+            />
+            <textarea
+              name="Mensagem"
+              placeholder="Mensagem"
+              rows="4"
+            ></textarea>
+          </div>
+          <button type="submit" class="botaoOrcamento">
+            Solicitar agendamento
+          </button>
+        </form>
+      </section>
+
+      <section class="apoio-section" id="apoie">
+        <div class="apoio-container">
+          <div class="apoio-imagem">
+            <img src="Images/imagemApoie.jpeg" alt="Integrantes da Orquestra" />
+          </div>
+          <div class="apoio-conteudo">
+            <h2>Apoie financeiramente a Orquestra Jovem Cidadão</h2>
+            <p>
+              Com sua contribuição, nossa música transforma vidas e você ainda
+              recebe contrapartidas especiais.
+            </p>
+            <div class="apoio-action">
+              <a
+                href="COLE_O_LINK_DA_VAKINHA_AQUI"
+                target="_blank"
+                class="btn-apoie"
+                >Apoie nosso projeto</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="FooterContent">
+        <div class="FooterBrand">
+          <img
+            src="Images/logoFooter.png"
+            alt="Logo Orquestra Rodapé"
+            class="footer-logo"
+          />
+        </div>
+        <div class="FooterInfo">
+          <a
+            href="https://instagram.com/orquestrajovemcidadao"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="InstaLink"
+          >
+            <i class="fab fa-instagram"></i>
+            <span>Siga-nos no Instagram</span>
+          </a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=orquestrajovemcidadao@gmail.com"
+            class="EmailLink"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fas fa-envelope"></i>
+            <span>Entre em contato por E-mail</span>
+          </a>
+        </div>
       </div>
-    </section>
-
-    <section class="agenda" id="agenda">
-      <h2 class="agendaTitulo">Agenda de Eventos</h2>
-      <div class="agendaLinha"></div>
-      <div class="agendaContainer">
-        <div class="eventoCard">
-          <div class="eventoDataBox">
-            <span class="eventoDia">03</span>
-            <span class="eventoMes">JUN</span>
-          </div>
-          <div class="eventoDetalhes">
-            <h3 class="eventoNome">Cerimônia de Abertura da Copa do Mundo de Futsal Base</h3>
-            <p class="eventoInfo">18h00</p>
-            <p class="eventoInfo"><i class="ph ph-map-pin"></i> Poliesportivo Municipal</p>
-          </div>
-        </div>
-
-        <div class="eventoCard">
-          <div class="eventoDataBox">
-            <span class="eventoDia">20</span>
-            <span class="eventoMes">SET</span>
-          </div>
-          <div class="eventoDetalhes">
-            <h3 class="eventoNome">Apresentação Beneficente</h3>
-            <p class="eventoInfo">19h30</p>
-            <p class="eventoInfo"><i class="ph ph-map-pin"></i> Praça Central</p>
-          </div>
-        </div>
-
-        <div class="eventoCard">
-          <div class="eventoDataBox">
-            <span class="eventoDia">10</span>
-            <span class="eventoMes">OUT</span>
-          </div>
-          <div class="eventoDetalhes">
-            <h3 class="eventoNome">III Festival de Orquestras</h3>
-            <p class="eventoInfo">20h00</p>
-            <p class="eventoInfo"><i class="ph ph-map-pin"></i> Teatro Municipal</p>
-          </div>
-        </div>
-
-        <div class="eventoCard">
-          <div class="eventoDataBox">
-            <span class="eventoDia">05</span>
-            <span class="eventoMes">DEZ</span>
-          </div>
-          <div class="eventoDetalhes">
-            <h3 class="eventoNome">Concerto de Natal</h3>
-            <p class="eventoInfo">20h00</p>
-            <p class="eventoInfo"><i class="ph ph-map-pin"></i> Igreja São José</p>
-          </div>
-        </div>
+      <div class="FooterBottom">
+        <p>© 2026 Orquestra Jovem Cidadão. Todos os direitos reservados.</p>
+        <p>Desenvolvido por <strong>Gislene Andrade</strong></p>
       </div>
-    </section>
+    </footer>
 
-    <section class="galeria" id="galeria">
-      <h2 class="galeriaTitulo">Galeria</h2>
-      <div class="galeriaLinha"></div>
-      <div class="galeriaCarrossel">
-        <div class="galeriaItem"><img src="Images/Foto1.jpg" alt="Apresentação da Orquestra 1"></div>
-        <div class="galeriaItem">
-          <video width="640" height="360" controls autoplay muted>
-            <source src="Images/Video1.mp4" type="video/mp4">
-            Seu navegador não suporta este vídeo.
-        </video>
-        </div>
-        <div class="galeriaItem"><img src="Images/foto2.jpg" alt="Apresentação da Orquestra 2"></div>
-        <div class="galeriaItem"><img src="Images/imagemConteudoInicio.jpeg" alt="Apresentação da Orquestra 4"></div>
-        <div class="galeriaItem">
-          <video width="640" height="360" controls autoplay muted>
-            <source src="Images/Video2.mp4" type="video/mp4">
-            Seu navegador não suporta este vídeo.
-        </video>
-        </div>
-        <div class="galeriaItem"><img src="Images/imagemApoie.jpeg" alt="Apresentação da Orquestra 3"></div>
-      </div>
-    </section>
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const menuNavegacao = document.querySelector(".menuNavegacao");
 
-    <section class="contratacao" id="contratacao">
-      <div class="contratacaoInfo">
-        <h2 class="contratacaoTitulo">Agende uma Apresentação</h2>
-        <div class="contratacaoLinha"></div>
-        <p class="contratacaoSubtitulo">Levamos música e emoção para o seu evento!</p>
-        <ul class="contratacaoLista">
-          <li><i class="ph ph-check"></i> Formaturas</li>
-          <li><i class="ph ph-check"></i> Feriados</li>
-          <li><i class="ph ph-check"></i> Eventos culturais</li>
-        </ul>
-      </div>
-
-      <form class="contratacaoForm" action="https://formspree.io/f/xaqgovwo" method="POST">
-        <div class="formGrid">
-          <input type="text" name="Nome" placeholder="Nome completo" required>
-          <input type="email" name="Email" placeholder="E-mail" required>
-          <input type="tel" name="Telefone" placeholder="Telefone">
-          
-          <select name="Tipo_de_Evento" required>
-            <option value="" disabled selected>Tipo de evento</option>
-            <option value="formaturas">Formaturas</option>
-            <option value="feriados">Feriados</option>
-            <option value="culturais">Eventos culturais</option>
-          </select>
-          
-          <input type="text" name="Data_do_Evento" placeholder="Data do evento" onfocus="(this.type='date')" onblur="(this.type='text')">
-          <textarea name="Mensagem" placeholder="Mensagem" rows="4"></textarea>
-        </div>
-        <button type="submit" class="botaoOrcamento">Solicitar agendamento</button>
-      </form>
-    </section>
-
-    <section class="apoio-section" id="apoie">
-      <div class="apoio-container">
-        <div class="apoio-imagem">
-          <img src="Images/imagemApoie.jpeg" alt="Integrantes da Orquestra">
-        </div>
-        <div class="apoio-conteudo">
-          <h2>Apoie financeiramente a Orquestra Jovem Cidadão</h2>
-          <p>Com sua contribuição, nossa música transforma vidas e você ainda recebe contrapartidas especiais.</p>
-          <div class="apoio-action">
-            <a href="COLE_O_LINK_DA_VAKINHA_AQUI" target="_blank" class="btn-apoie">Apoie nosso projeto</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="FooterContent">
-      <div class="FooterBrand">
-        <img src="Images/logoFooter.png" alt="Logo Orquestra Rodapé" class="footer-logo">
-      </div>
-      <div class="FooterInfo">
-        <a href="https://instagram.com/orquestrajovemcidadao" target="_blank" rel="noopener noreferrer" class="InstaLink">
-          <i class="fab fa-instagram"></i>
-          <span>Siga-nos no Instagram</span>
-        </a>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=orquestrajovemcidadao@gmail.com" class="EmailLink" target="_blank" rel="noopener noreferrer">
-  <i class="fas fa-envelope"></i>
-  <span>Entre em contato por E-mail</span>
-</a>
-      </div>
-    </div>
-    <div class="FooterBottom">
-      <p>© 2026 Orquestra Jovem Cidadão. Todos os direitos reservados.</p>
-      <p>Desenvolvido por <strong>Gislene Andrade</strong></p>
-    </div>
-  </footer>
-
-<script>
-  const menuToggle = document.querySelector('.menu-toggle');
-  const menuNavegacao = document.querySelector('.menuNavegacao');
-
-  menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('active');
-    menuNavegacao.classList.toggle('active');
-  });
-</script>
-
-</body>
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        menuNavegacao.classList.toggle("active");
+      });
+    </script>
+  </body>
 </html>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Belleza&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Belleza&display=swap");
 
 * {
   margin: 0;
@@ -13,17 +13,17 @@ body {
 }
 
 .navegacao {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  padding: 8px;
-  background-color: white;
-  position: absolute; /* Muda de fixed para absolute */
   width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+  padding: 8px;
+  background-color: #ffffff;
 }
 
 .imagemHeader {
@@ -37,30 +37,32 @@ body {
 }
 
 .menuNavegacaoItem {
-  font-family: 'Belleza', sans-serif;
-  color: black;
-  font-weight: 400;
+  font-family: "Belleza", sans-serif;
   font-size: 18px;
+  font-weight: 400;
+  color: #000000;
 }
 
 .navegacaoBotao {
   display: inline-block;
   padding: 10px 40px;
-  border-radius: 50px;
-  color: white;
-  background: black;
   font-weight: bold;
   letter-spacing: 1px;
-  transition: 0.3s;
+  color: #ffffff;
+  background: #000000;
+  border-radius: 50px;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .navegacaoBotao:hover {
-  background-color: green;
+  background-color: #008000;
   transform: scale(1.05);
 }
 
 .conteudo {
-  padding-top: 48px
+  padding-top: 48px;
 }
 
 .conteudoInicio {
@@ -68,8 +70,8 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  background-color: black;
   width: 100%;
+  background-color: #000000;
 }
 
 .conteudoInicioEscrito {
@@ -80,24 +82,24 @@ body {
 }
 
 .conteudoInicioTitulo {
-  font-family: 'Belleza', sans-serif;
-  font-weight: 400;
+  font-family: "Belleza", sans-serif;
   font-size: 64px;
-  color: white;
+  font-weight: 400;
+  color: #ffffff;
 }
 
 .conteudoInicioSubtitulo {
-  font-family: 'Belleza', sans-serif;
-  font-weight: 400;
+  font-family: "Belleza", sans-serif;
   font-size: 32px;
-  color: white;
+  font-weight: 400;
+  color: #ffffff;
 }
 
-.conteudoInicioTexto{
-  font-family: 'Belleza', sans-serif;
-  font-weight: 200;
+.conteudoInicioTexto {
+  font-family: "Belleza", sans-serif;
   font-size: 24px;
-  color: white;
+  font-weight: 200;
+  color: #ffffff;
 }
 
 .botoesInicio {
@@ -107,57 +109,52 @@ body {
   gap: 20px;
 }
 
-.conteudoInicioBotaoConheca {
-  background-color: white;
-  padding: 15px 35px;
-  border-radius: 20px;
-  border: none;
-  font-family: 'Belleza', sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  color: black;
-  cursor:pointer;
-}
-
+.conteudoInicioBotaoConheca,
 .conteudoInicioContrate {
-  background-color: white;
   padding: 15px 35px;
-  border-radius: 20px;
-  border: none;
-  font-family: 'Belleza', sans-serif;
-  font-weight: 400;
+  font-family: "Belleza", sans-serif;
   font-size: 20px;
-  color: black;
-  cursor:pointer;
+  font-weight: 400;
+  color: #000000;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .conteudoInicioBotaoConheca:hover,
 .conteudoInicioContrate:hover {
   background-color: #f0f0f0;
   transform: translateY(-2px);
-  transition: all 0.2s ease;
 }
 
 .conteudoInicioImagem {
-  height: 500px;
   width: auto;
   max-width: 100%;
+  height: 500px;
   object-fit: cover;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 30%), linear-gradient(to bottom, black 85%, transparent 100%); 
-  mask-image: linear-gradient(to right, transparent 0%, black 30%), linear-gradient(to bottom, black 85%, transparent 100%);
-  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right, transparent 0%, #000000 30%),
+    linear-gradient(to bottom, #000000 85%, transparent 100%);
   mask-composite: intersect;
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0%, #000000 30%),
+    linear-gradient(to bottom, #000000 85%, transparent 100%);
+  -webkit-mask-composite: source-in;
 }
 
 .sobre {
-  background-color: white;
-  color: black;
-  padding: 80px 10% ;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: 60px;
+  padding: 80px 10%;
+  color: #000000;
+  background-color: #ffffff;
 }
 
 .sobreTextoBloco {
@@ -165,74 +162,74 @@ body {
 }
 
 .sobreConteudoTitulo {
-  font-family: 'Belleza', sans-serif;
-  font-size: 36px;
   margin-bottom: 24px;
+  font-family: "Belleza", sans-serif;
+  font-size: 36px;
 }
 
 .sobreConteudoTexto {
-  font-family: 'Belleza', sans-serif;
+  font-family: "Belleza", sans-serif;
   font-size: 18px;
   line-height: 1.6;
-  color: #484D50;
+  color: #484d50;
 }
 
 .sobreEstatisticas {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 40px;
-  padding: 40px;
-  background-color: white; 
-  border-radius: 12px;
   min-width: 280px;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 12px;
 }
 
 .estatisticaItem {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px; 
+  gap: 8px;
   text-align: center;
 }
 
 .estatisticaItem i {
-  font-size: 36px; 
-  color: black; 
+  font-size: 36px;
+  color: #000000;
 }
 
 .estatisticaNumero {
-  font-family: 'Belleza', sans-serif;
+  font-family: "Belleza", sans-serif;
   font-size: 32px;
-  color: black; 
   font-weight: bold;
+  color: #000000;
 }
 
 .estatisticaTexto {
-  font-family: 'Belleza', sans-serif;
+  font-family: "Belleza", sans-serif;
   font-size: 16px;
-  color: #484D50; 
+  color: #484d50;
 }
 
 .professores {
-  background-color: black;
   padding: 60px 10%;
   text-align: center;
+  background-color: #000000;
 }
 
 .professoresTitulo {
-  font-family: 'Belleza', sans-serif;
-  font-size: 36px;
-  color: white;
   margin-bottom: 8px;
+  font-family: "Belleza", sans-serif;
+  font-size: 36px;
+  color: #ffffff;
 }
 
 .professoresLinha {
   width: 50px;
   height: 2px;
-  background-color: gray;
   margin: 0 auto 40px auto;
+  background-color: #808080;
 }
 
 .professoresContainer {
@@ -244,17 +241,17 @@ body {
 }
 
 .professorCard {
-  background-color: black;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px white;
-  padding: 24px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex: 1 1 400px;
   gap: 20px;
   max-width: 450px;
-  flex: 1 1 400px;
+  padding: 24px;
   text-align: left;
+  background-color: #000000;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px #ffffff;
 }
 
 .professorFotoContainer {
@@ -264,8 +261,8 @@ body {
 .professorFoto {
   width: 120px;
   height: 120px;
-  border-radius: 50%;
   object-fit: cover;
+  border-radius: 50%;
 }
 
 .professorInfo {
@@ -275,27 +272,26 @@ body {
 }
 
 .professorNome {
-  font-family: 'Belleza', sans-serif;
+  font-family: "Belleza", sans-serif;
   font-size: 22px;
-  color: white;
   font-weight: bold;
+  color: #ffffff;
 }
 
 .professorInstrumento {
-  font-family: 'Belleza', sans-serif;
+  font-family: "Belleza", sans-serif;
   font-size: 16px;
-  color: gray;
   font-weight: 500;
+  color: #808080;
 }
 
 .professorBio {
-  font-family: 'Belleza', sans-serif;
+  font-family: "Belleza", sans-serif;
   font-size: 14px;
-  color: #666666;
   line-height: 1.4;
+  color: #666666;
 }
 
-/* Ícones de Redes Sociais */
 .professorRedes {
   display: flex;
   gap: 12px;
@@ -303,33 +299,33 @@ body {
 }
 
 .professorRedes a {
-  color: white;
   font-size: 20px;
+  color: #ffffff;
   transition: color 0.2s ease;
 }
 
 .professorRedes a:hover {
-  color: gray;
+  color: #808080;
 }
 
 .agenda {
-  background-color: #fcfbfa;
   padding: 60px 5%;
   text-align: center;
+  background-color: #fcfbfa;
 }
 
 .agendaTitulo {
-  font-family: 'Belleza', sans-serif;
+  margin-bottom: 8px;
+  font-family: "Belleza", sans-serif;
   font-size: 36px;
   color: #1a1a1a;
-  margin-bottom: 8px;
 }
 
 .agendaLinha {
   width: 50px;
   height: 2px;
-  background-color: gray;
   margin: 0 auto 40px auto;
+  background-color: #808080;
 }
 
 .agendaContainer {
@@ -341,48 +337,47 @@ body {
 }
 
 .eventoCard {
-  background-color: white;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 16px;
-  gap: 16px;
   flex: 1 1 260px;
+  gap: 16px;
   max-width: 320px;
+  padding: 16px;
   text-align: left;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
 }
 
 .eventoDataBox {
-  background-color: #f5f5f5;
-  border-radius: 6px;
-  padding: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-width: 65px;
   height: 65px;
+  padding: 12px;
+  background-color: #f5f5f5;
+  border-radius: 6px;
 }
 
 .eventoDia {
-  font-family: 'Belleza', sans-serif;
+  font-family: "Belleza", sans-serif;
   font-size: 24px;
   font-weight: bold;
-  color: #1a1a1a;
   line-height: 1;
+  color: #1a1a1a;
 }
 
 .eventoMes {
-  font-family: 'Belleza', sans-serif;
+  margin-top: 4px;
+  font-family: "Belleza", sans-serif;
   font-size: 12px;
   font-weight: bold;
   color: #555555;
-  margin-top: 4px;
 }
 
-/* Bloco de Textos do Evento (Direita) */
 .eventoDetalhes {
   display: flex;
   flex-direction: column;
@@ -390,334 +385,310 @@ body {
 }
 
 .eventoNome {
-  font-family: 'Belleza', sans-serif;
+  font-family: "Belleza", sans-serif;
   font-size: 16px;
   font-weight: bold;
   color: #1a1a1a;
 }
 
 .eventoInfo {
-  font-family: 'Belleza', sans-serif;
-  font-size: 14px;
-  color: #666666;
   display: flex;
   align-items: center;
   gap: 6px;
+  font-family: "Belleza", sans-serif;
+  font-size: 14px;
+  color: #666666;
 }
 
 .eventoInfo i {
-  color: #888888;
   font-size: 14px;
+  color: #888888;
 }
 
-/* Container da Seção Inteira */
 .galeria {
-  background-color: #000000; /* Fundo totalmente preto */
-  padding: 60px 0; /* Zero de padding nas laterais para as fotos encostarem na borda ao rolar */
+  padding: 60px 0;
   text-align: center;
+  background-color: #000000;
 }
 
 .galeriaTitulo {
-  font-family: 'Belleza', sans-serif;
-  font-size: 36px;
-  color: #ffffff; /* Letras brancas */
   margin-bottom: 8px;
+  font-family: "Belleza", sans-serif;
+  font-size: 36px;
+  color: #ffffff;
 }
 
-/* Linha decorativa cinza sob o título */
 .galeriaLinha {
   width: 50px;
   height: 2px;
-  background-color: #555555; /* Detalhe cinza */
   margin: 0 auto 40px auto;
+  background-color: #555555;
 }
 
-/* O Carrossel (A mágica acontece aqui) */
 .galeriaCarrossel {
   display: flex;
   flex-direction: row;
   gap: 16px;
-  padding: 0 5%; /* Dá uma margem inicial charmosa para a primeira foto */
-  
-  /* Ativa o scroll horizontal nativo e suave */
+  padding: 0 5%;
   overflow-x: auto;
   scroll-behavior: smooth;
-  
-  /* Efeito 'Snap': faz a foto travar certinho no lugar quando o usuário para de passar */
   scroll-snap-type: x mandatory;
-  
-  /* Esconde a barra de rolagem padrão no Chrome, Safari e Edge */
   -webkit-overflow-scrolling: touch;
 }
 
 .galeriaCarrossel::-webkit-scrollbar {
-  height: 8px; /* Altura da barra de rolagem inferior */
+  height: 8px;
 }
 
 .galeriaCarrossel::-webkit-scrollbar-track {
-  background: #1a1a1a; /* Cor do fundo da barra de rolagem (cinza bem escuro) */
+  background: #1a1a1a;
 }
 
 .galeriaCarrossel::-webkit-scrollbar-thumb {
-  background: #555555; /* Cor do botão de arrastar da barra (detalhe cinza) */
+  background: #555555;
   border-radius: 10px;
 }
 
-/* Estilo de cada bloco de imagem */
 .galeriaItem {
-  flex: 0 0 auto; /* Impede que as imagens encolham para caber na tela */
-  width: 400px; /* Largura um pouco maior que o padrão para destacar as fotos */
-  height: 250px; /* Proporção retangular idêntica ao seu exemplo */
-  scroll-snap-align: start; /* Alinha o início do card ao efeito magnético do snap */
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 400px;
+  height: 250px;
+  overflow: hidden;
+  border: 1px solid #222222;
   border-radius: 8px;
-  overflow: hidden; /* Garante que os cantos arredondados funcionem na imagem */
-  border: 1px solid #222222; /* Uma borda sutil cinza quase imperceptível */
 }
 
-/* Estilo da Imagem interna */
 .galeriaItem img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Preenche o bloco perfeitamente sem deformar os músicos */
-  transition: transform 0.3s ease;
+  object-fit: cover;
   cursor: grab;
+  transition: transform 0.3s ease;
 }
 
-/* Efeito interativo discreto ao passar o mouse */
 .galeriaItem img:hover {
-  transform: scale(1.03); /* Dá um leve zoom elegante na foto */
+  transform: scale(1.03);
 }
 
-/* Container Geral da Seção */
 .contratacao {
-  background-color: #ffffff; /* Fundo totalmente branco */
-  color: #000000; /* Letras pretas */
-  padding: 80px 10%;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
   gap: 60px;
+  padding: 80px 10%;
+  color: #000000;
+  background-color: #ffffff;
 }
 
-/* --- BLOCO ESQUERDO --- */
 .contratacaoInfo {
   flex: 1;
   max-width: 400px;
 }
 
 .contratacaoTitulo {
-  font-family: 'Belleza', sans-serif;
+  margin-bottom: 8px;
+  font-family: "Belleza", sans-serif;
   font-size: 36px;
   color: #1a1a1a;
-  margin-bottom: 8px;
 }
 
 .contratacaoLinha {
   width: 50px;
   height: 2px;
-  background-color: gray; /* Linha dourada decorativa padrão */
   margin-bottom: 24px;
+  background-color: #808080;
 }
 
 .contratacaoSubtitulo {
-  font-family: 'Belleza', sans-serif;
-  font-size: 18px;
-  color: #555555; /* Detalhes em cinza */
   margin-bottom: 24px;
+  font-family: "Belleza", sans-serif;
+  font-size: 18px;
   font-weight: 500;
+  color: #555555;
 }
 
 .contratacaoLista {
-  list-style: none;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  list-style: none;
 }
 
 .contratacaoLista li {
-  font-family: 'Belleza', sans-serif;
-  font-size: 16px;
-  color: #333333;
   display: flex;
   align-items: center;
   gap: 10px;
+  font-family: "Belleza", sans-serif;
+  font-size: 16px;
+  color: #333333;
 }
 
-/* Ícone de visto dourado/bronze */
 .contratacaoLista i {
-  color: gray;
   font-size: 18px;
   font-weight: bold;
+  color: #808080;
 }
 
-/* --- BLOCO DIREITO (FORMULÁRIO) --- */
 .contratacaoForm {
-  flex: 1.5;
-  width: 100%;
   display: flex;
   flex-direction: column;
+  flex: 1.5;
+  width: 100%;
   gap: 20px;
 }
 
-/* Grid inteligente para organizar os inputs em duas colunas */
 .formGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
 }
 
-/* Estilo de todos os campos de texto, select e textarea */
 .contratacaoForm input,
 .contratacaoForm select,
 .contratacaoForm textarea {
-  font-family: 'Belleza', sans-serif;
-  font-size: 15px;
+  width: 100%;
   padding: 14px;
-  border: 1px solid #dcdcdc; /* Borda cinza suave */
-  border-radius: 6px;
-  background-color: #ffffff;
+  font-family: "Belleza", sans-serif;
+  font-size: 15px;
   color: #1a1a1a;
   outline: none;
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
   transition: border-color 0.2s ease;
-  width: 100%;
 }
 
-/* Efeito de foco quando o usuário clica no campo */
 .contratacaoForm input:focus,
 .contratacaoForm select:focus,
 .contratacaoForm textarea:focus {
-  border-color: #555555; /* Borda muda para cinza escuro ao focar */
+  border-color: #555555;
 }
 
-/* Faz com que a caixa de mensagem ocupe as duas colunas inteiras sozinho */
 .formGrid textarea {
   grid-column: span 2;
-  resize: vertical; /* Permite esticar apenas para baixo */
+  resize: vertical;
 }
 
-/* Botão de Envio */
 .botaoOrcamento {
-  font-family: 'Belleza', sans-serif;
+  align-self: flex-start;
+  min-width: 250px;
+  padding: 16px;
+  font-family: "Belleza", sans-serif;
   font-size: 16px;
   font-weight: bold;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #ffffff;
-  background-color: gray;
+  cursor: pointer;
+  background-color: #808080;
   border: none;
   border-radius: 6px;
-  padding: 16px;
-  cursor: pointer;
-  align-self: flex-start;
-  min-width: 250px;
-  transition: background-color 0.2s ease, transform 0.1s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
 }
 
 .botaoOrcamento:hover {
-  background-color: gray
+  background-color: #808080;
 }
 
 .botaoOrcamento:active {
   transform: scale(0.98);
 }
 
-/* Configuração Geral da Seção (Invertida para Fundo Preto) */
 .apoio-section {
   padding: 60px 20px;
-  background-color: #000000; /* Fundo preto */
   font-family: sans-serif;
+  background-color: #000000;
 }
 
 .apoio-container {
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 40px; /* Espaço entre a imagem e o texto */
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Estilização da Imagem */
 .apoio-imagem {
   flex: 1;
 }
 
 .apoio-imagem img {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
   object-fit: cover;
   border-radius: 25px;
 }
 
-/* Estilização do Conteúdo (Texto e Botão) */
 .apoio-conteudo {
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex: 1;
 }
 
 .apoio-conteudo h2 {
+  margin-bottom: 20px;
   font-size: 2.5rem;
   font-weight: bold;
-  color: #ffffff; /* Letras brancas */
-  margin-bottom: 20px;
   line-height: 1.2;
+  color: #ffffff;
 }
 
 .apoio-conteudo p {
-  font-size: 1.1rem;
-  color: #e0e0e0; /* Um branco ligeiramente suave para melhorar a leitura */
   margin-bottom: 30px;
+  font-size: 1.1rem;
   line-height: 1.6;
+  color: #e0e0e0;
 }
 
-/* Estilização do Botão da Vakinha (Agora com Fundo Branco e Letras Pretas) */
 .apoio-action {
   display: flex;
 }
 
 .btn-apoie {
   display: inline-block;
-  background-color: #ffffff; /* Botão branco */
-  color: #000000; /* Texto do botão preto */
   padding: 14px 28px;
   font-size: 1.1rem;
   font-weight: bold;
+  color: #000000;
   text-decoration: none;
+  background-color: #ffffff;
   border-radius: 4px;
-  transition: background-color 0.2s ease, transform 0.1s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
 }
 
 .btn-apoie:hover {
-  background-color: #e0e0e0; /* Fica um cinza bem claro ao passar o mouse */
+  background-color: #e0e0e0;
 }
 
 .btn-apoie:active {
-  transform: scale(0.98); /* Efeito de clique */
+  transform: scale(0.98);
 }
 
-/* Estilização Geral do Footer */
 footer {
-  background: linear-gradient(to right, #000000, #333333);
   padding: 25px 20px 15px 20px;
   font-family: sans-serif;
+  background: linear-gradient(to bottom, #000000, #333333) !important;
 }
 
-/* Container Principal */
 .FooterContent {
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Alinha a logo centralizada verticalmente com o bloco de botões */
+  align-items: center;
   gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
   padding-bottom: 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-/* Bloco da Esquerda (Apenas a Logo) */
 .FooterBrand {
   display: flex;
   align-items: center;
@@ -729,44 +700,42 @@ footer {
   display: block;
 }
 
-/* Bloco da Direita (Instagram e E-mail empilhados) */
 .FooterInfo {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Espaço entre o botão do Instagram e o de E-mail */
-  align-items: flex-end; /* Alinha os botões à direita */
+  align-items: flex-end;
+  gap: 10px;
 }
 
-/* Estilo Base para os Botões Pílula (Insta e Email) */
-.InstaLink, .EmailLink {
+.InstaLink,
+.EmailLink {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: transparent;
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.5);
   padding: 8px 18px;
-  text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
   transition: all 0.2s ease;
 }
 
-/* Efeito Hover para os dois botões */
-.InstaLink:hover, .EmailLink:hover {
-  background-color: #ffffff;
+.InstaLink:hover,
+.EmailLink:hover {
   color: #000000;
+  background-color: #ffffff;
   border-color: #ffffff;
 }
 
-/* Parte Inferior dos Créditos */
 .FooterBottom {
-  max-width: 1200px;
-  margin: 15px auto 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
+  margin: 15px auto 0 auto;
   font-size: 0.85rem;
   color: #cccccc;
 }
@@ -779,55 +748,14 @@ footer {
   color: #ffffff;
 }
 
-/* Responsividade para Celulares */
-@media (max-width: 768px) {
-  footer {
-    background: linear-gradient(to bottom, #000000, #333333);
-  }
-
-  .FooterContent {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-  }
-
-  .FooterInfo {
-    align-items: center; /* Centraliza os botões no celular */
-    width: 100%;
-  }
-  
-  .InstaLink, .EmailLink {
-    width: 100%; /* Faz os botões ocuparem a mesma largura no mobile, se preferir */
-    box-sizing: border-box;
-    justify-content: center;
-  }
-
-  .FooterBottom {
-    flex-direction: column;
-    gap: 8px;
-    text-align: center;
-  }
-}
-
-/* ==========================================================================
-   1. GRADIENT DO FOOTER PARA COMPUTADOR (E TELAS GERAIS)
-   ========================================================================== */
-footer {
-  /* Força o gradiente vertical (do topo ao fundo) igual ao do celular */
-  background: linear-gradient(to bottom, #000000, #333333) !important;
-  padding: 25px 20px 15px 20px;
-  font-family: sans-serif;
-}
-
-/* Estilo do botão hambúrguer (escondido no computador) */
 .menu-toggle {
   display: none;
   flex-direction: column;
   gap: 5px;
+  padding: 4px;
+  cursor: pointer;
   background: transparent;
   border: none;
-  cursor: pointer;
-  padding: 4px;
   z-index: 1001;
 }
 
@@ -835,49 +763,72 @@ footer {
   display: block;
   width: 28px;
   height: 3px;
-  background-color: black;
+  background-color: #000000;
   transition: all 0.3s ease;
 }
 
-/* ==========================================================================
-   2. RESPONSIVIDADE & MENU HAMBÚRGUER (MOBILE)
-   ========================================================================== */
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: flex; /* Mostra o botão no celular */
+  footer {
+    background: linear-gradient(to bottom, #000000, #333333);
   }
 
-  /* Transforma o menu em uma tela que desliza/surge de cima */
-  .menuNavegacao {
-    display: none; /* Escondido por padrão */
+  .FooterContent {
     flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .FooterInfo {
+    align-items: center;
+    width: 100%;
+  }
+
+  .InstaLink,
+  .EmailLink {
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .FooterBottom {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .menuNavegacao {
     position: absolute;
     top: 100%;
     left: 0;
+    display: none;
+    flex-direction: column;
     width: 100%;
-    background-color: white;
-    padding: 20px;
     gap: 20px;
+    padding: 20px;
+    background-color: #ffffff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
 
-  /* Classe que o JavaScript vai ativar para abrir o menu */
   .menuNavegacao.active {
     display: flex;
   }
 
-  /* Animação do Hambúrguer virando um "X" quando ativo */
   .menu-toggle.active span:nth-child(1) {
     transform: rotate(45deg) translate(6px, 6px);
   }
+
   .menu-toggle.active span:nth-child(2) {
     opacity: 0;
   }
+
   .menu-toggle.active span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
   }
 
-  /* Ajustes das outras seções para o mobile não quebrar */
   .navegacao {
     justify-content: space-between;
     padding: 16px 24px;
@@ -885,8 +836,8 @@ footer {
 
   .conteudoInicio {
     flex-direction: column-reverse;
-    text-align: center;
     padding-bottom: 40px;
+    text-align: center;
   }
 
   .conteudoInicioEscrito {
@@ -894,50 +845,111 @@ footer {
     gap: 24px;
   }
 
-  .conteudoInicioTitulo { font-size: 40px; }
-  .conteudoInicioSubtitulo { font-size: 24px; }
-  .conteudoInicioTexto { font-size: 18px; }
+  .conteudoInicioTitulo {
+    font-size: 40px;
+  }
 
-  .botoesInicio { justify-content: center; }
-  .conteudoInicioBotaoConheca, .conteudoInicioContrate { width: 100%; }
+  .conteudoInicioSubtitulo {
+    font-size: 24px;
+  }
+
+  .conteudoInicioTexto {
+    font-size: 18px;
+  }
+
+  .botoesInicio {
+    justify-content: center;
+  }
+
+  .conteudoInicioBotaoConheca,
+  .conteudoInicioContrate {
+    width: 100%;
+  }
 
   .conteudoInicioImagem {
     max-width: 100%;
     height: 350px;
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 85%, transparent 100%);
-    mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 85%, transparent 100%);
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      #000000 20%,
+      #000000 85%,
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      #000000 20%,
+      #000000 85%,
+      transparent 100%
+    );
   }
 
   .sobre {
     flex-direction: column;
-    padding: 60px 5%;
     gap: 40px;
+    padding: 60px 5%;
     text-align: center;
   }
 
-  .sobreEstatisticas { width: 100%; min-width: auto; }
-  .professores { padding: 60px 5%; }
-  .professorCard { flex-direction: column; text-align: center; max-width: 100%; }
-  .galeriaItem { width: 280px; height: 180px; }
+  .sobreEstatisticas {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .professores {
+    padding: 60px 5%;
+  }
+
+  .professorCard {
+    flex-direction: column;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .galeriaItem {
+    width: 280px;
+    height: 180px;
+  }
 
   .contratacao {
     flex-direction: column;
-    padding: 60px 5%;
     gap: 40px;
+    padding: 60px 5%;
   }
 
-  .contratacaoInfo { max-width: 100%; text-align: center; }
-  .contratacaoLinha { margin: 0 auto 24px auto; }
-  .formGrid { grid-template-columns: 1fr; }
-  .formGrid textarea { grid-column: span 1; }
-  .botaoOrcamento { width: 100%; }
+  .contratacaoInfo {
+    max-width: 100%;
+    text-align: center;
+  }
 
-  .apoio-container { flex-direction: column; gap: 30px; text-align: center; }
-  .apoio-action { justify-content: center; }
-  .btn-apoie { width: 100%; }
+  .contratacaoLinha {
+    margin: 0 auto 24px auto;
+  }
 
-  .FooterContent { flex-direction: column; text-align: center; gap: 20px; }
-  .FooterInfo { align-items: center; width: 100%; }
-  .InstaLink, .EmailLink { width: 100%; justify-content: center; }
-  .FooterBottom { flex-direction: column; gap: 8px; }
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formGrid textarea {
+    grid-column: span 1;
+  }
+
+  .botaoOrcamento {
+    width: 100%;
+  }
+
+  .apoio-container {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .apoio-action {
+    justify-content: center;
+  }
+
+  .btn-apoie {
+    width: 100%;
+  }
 }
