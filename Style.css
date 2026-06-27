@@ -1,0 +1,943 @@
+@import url('https://fonts.googleapis.com/css2?family=Belleza&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-size: 100%;
+  font-family: "Belleza", sans-serif;
+}
+
+.navegacao {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 8px;
+  background-color: white;
+  position: absolute; /* Muda de fixed para absolute */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.imagemHeader {
+  width: 150px;
+  height: auto;
+}
+
+.menuNavegacao {
+  display: flex;
+  gap: 32px;
+}
+
+.menuNavegacaoItem {
+  font-family: 'Belleza', sans-serif;
+  color: black;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.navegacaoBotao {
+  display: inline-block;
+  padding: 10px 40px;
+  border-radius: 50px;
+  color: white;
+  background: black;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.navegacaoBotao:hover {
+  background-color: green;
+  transform: scale(1.05);
+}
+
+.conteudo {
+  padding-top: 48px
+}
+
+.conteudoInicio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: black;
+  width: 100%;
+}
+
+.conteudoInicioEscrito {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 48px;
+}
+
+.conteudoInicioTitulo {
+  font-family: 'Belleza', sans-serif;
+  font-weight: 400;
+  font-size: 64px;
+  color: white;
+}
+
+.conteudoInicioSubtitulo {
+  font-family: 'Belleza', sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  color: white;
+}
+
+.conteudoInicioTexto{
+  font-family: 'Belleza', sans-serif;
+  font-weight: 200;
+  font-size: 24px;
+  color: white;
+}
+
+.botoesInicio {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.conteudoInicioBotaoConheca {
+  background-color: white;
+  padding: 15px 35px;
+  border-radius: 20px;
+  border: none;
+  font-family: 'Belleza', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: black;
+  cursor:pointer;
+}
+
+.conteudoInicioContrate {
+  background-color: white;
+  padding: 15px 35px;
+  border-radius: 20px;
+  border: none;
+  font-family: 'Belleza', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: black;
+  cursor:pointer;
+}
+
+.conteudoInicioBotaoConheca:hover,
+.conteudoInicioContrate:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
+
+.conteudoInicioImagem {
+  height: 500px;
+  width: auto;
+  max-width: 100%;
+  object-fit: cover;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 30%), linear-gradient(to bottom, black 85%, transparent 100%); 
+  mask-image: linear-gradient(to right, transparent 0%, black 30%), linear-gradient(to bottom, black 85%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+
+.sobre {
+  background-color: white;
+  color: black;
+  padding: 80px 10% ;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.sobreTextoBloco {
+  flex: 1;
+}
+
+.sobreConteudoTitulo {
+  font-family: 'Belleza', sans-serif;
+  font-size: 36px;
+  margin-bottom: 24px;
+}
+
+.sobreConteudoTexto {
+  font-family: 'Belleza', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #484D50;
+}
+
+.sobreEstatisticas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 40px;
+  background-color: white; 
+  border-radius: 12px;
+  min-width: 280px;
+}
+
+.estatisticaItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px; 
+  text-align: center;
+}
+
+.estatisticaItem i {
+  font-size: 36px; 
+  color: black; 
+}
+
+.estatisticaNumero {
+  font-family: 'Belleza', sans-serif;
+  font-size: 32px;
+  color: black; 
+  font-weight: bold;
+}
+
+.estatisticaTexto {
+  font-family: 'Belleza', sans-serif;
+  font-size: 16px;
+  color: #484D50; 
+}
+
+.professores {
+  background-color: black;
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.professoresTitulo {
+  font-family: 'Belleza', sans-serif;
+  font-size: 36px;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.professoresLinha {
+  width: 50px;
+  height: 2px;
+  background-color: gray;
+  margin: 0 auto 40px auto;
+}
+
+.professoresContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.professorCard {
+  background-color: black;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px white;
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  max-width: 450px;
+  flex: 1 1 400px;
+  text-align: left;
+}
+
+.professorFotoContainer {
+  flex-shrink: 0;
+}
+
+.professorFoto {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.professorInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.professorNome {
+  font-family: 'Belleza', sans-serif;
+  font-size: 22px;
+  color: white;
+  font-weight: bold;
+}
+
+.professorInstrumento {
+  font-family: 'Belleza', sans-serif;
+  font-size: 16px;
+  color: gray;
+  font-weight: 500;
+}
+
+.professorBio {
+  font-family: 'Belleza', sans-serif;
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.4;
+}
+
+/* Ícones de Redes Sociais */
+.professorRedes {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.professorRedes a {
+  color: white;
+  font-size: 20px;
+  transition: color 0.2s ease;
+}
+
+.professorRedes a:hover {
+  color: gray;
+}
+
+.agenda {
+  background-color: #fcfbfa;
+  padding: 60px 5%;
+  text-align: center;
+}
+
+.agendaTitulo {
+  font-family: 'Belleza', sans-serif;
+  font-size: 36px;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.agendaLinha {
+  width: 50px;
+  height: 2px;
+  background-color: gray;
+  margin: 0 auto 40px auto;
+}
+
+.agendaContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.eventoCard {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px;
+  gap: 16px;
+  flex: 1 1 260px;
+  max-width: 320px;
+  text-align: left;
+}
+
+.eventoDataBox {
+  background-color: #f5f5f5;
+  border-radius: 6px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 65px;
+  height: 65px;
+}
+
+.eventoDia {
+  font-family: 'Belleza', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #1a1a1a;
+  line-height: 1;
+}
+
+.eventoMes {
+  font-family: 'Belleza', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #555555;
+  margin-top: 4px;
+}
+
+/* Bloco de Textos do Evento (Direita) */
+.eventoDetalhes {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.eventoNome {
+  font-family: 'Belleza', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.eventoInfo {
+  font-family: 'Belleza', sans-serif;
+  font-size: 14px;
+  color: #666666;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.eventoInfo i {
+  color: #888888;
+  font-size: 14px;
+}
+
+/* Container da Seção Inteira */
+.galeria {
+  background-color: #000000; /* Fundo totalmente preto */
+  padding: 60px 0; /* Zero de padding nas laterais para as fotos encostarem na borda ao rolar */
+  text-align: center;
+}
+
+.galeriaTitulo {
+  font-family: 'Belleza', sans-serif;
+  font-size: 36px;
+  color: #ffffff; /* Letras brancas */
+  margin-bottom: 8px;
+}
+
+/* Linha decorativa cinza sob o título */
+.galeriaLinha {
+  width: 50px;
+  height: 2px;
+  background-color: #555555; /* Detalhe cinza */
+  margin: 0 auto 40px auto;
+}
+
+/* O Carrossel (A mágica acontece aqui) */
+.galeriaCarrossel {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  padding: 0 5%; /* Dá uma margem inicial charmosa para a primeira foto */
+  
+  /* Ativa o scroll horizontal nativo e suave */
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  
+  /* Efeito 'Snap': faz a foto travar certinho no lugar quando o usuário para de passar */
+  scroll-snap-type: x mandatory;
+  
+  /* Esconde a barra de rolagem padrão no Chrome, Safari e Edge */
+  -webkit-overflow-scrolling: touch;
+}
+
+.galeriaCarrossel::-webkit-scrollbar {
+  height: 8px; /* Altura da barra de rolagem inferior */
+}
+
+.galeriaCarrossel::-webkit-scrollbar-track {
+  background: #1a1a1a; /* Cor do fundo da barra de rolagem (cinza bem escuro) */
+}
+
+.galeriaCarrossel::-webkit-scrollbar-thumb {
+  background: #555555; /* Cor do botão de arrastar da barra (detalhe cinza) */
+  border-radius: 10px;
+}
+
+/* Estilo de cada bloco de imagem */
+.galeriaItem {
+  flex: 0 0 auto; /* Impede que as imagens encolham para caber na tela */
+  width: 400px; /* Largura um pouco maior que o padrão para destacar as fotos */
+  height: 250px; /* Proporção retangular idêntica ao seu exemplo */
+  scroll-snap-align: start; /* Alinha o início do card ao efeito magnético do snap */
+  border-radius: 8px;
+  overflow: hidden; /* Garante que os cantos arredondados funcionem na imagem */
+  border: 1px solid #222222; /* Uma borda sutil cinza quase imperceptível */
+}
+
+/* Estilo da Imagem interna */
+.galeriaItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Preenche o bloco perfeitamente sem deformar os músicos */
+  transition: transform 0.3s ease;
+  cursor: grab;
+}
+
+/* Efeito interativo discreto ao passar o mouse */
+.galeriaItem img:hover {
+  transform: scale(1.03); /* Dá um leve zoom elegante na foto */
+}
+
+/* Container Geral da Seção */
+.contratacao {
+  background-color: #ffffff; /* Fundo totalmente branco */
+  color: #000000; /* Letras pretas */
+  padding: 80px 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* --- BLOCO ESQUERDO --- */
+.contratacaoInfo {
+  flex: 1;
+  max-width: 400px;
+}
+
+.contratacaoTitulo {
+  font-family: 'Belleza', sans-serif;
+  font-size: 36px;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.contratacaoLinha {
+  width: 50px;
+  height: 2px;
+  background-color: gray; /* Linha dourada decorativa padrão */
+  margin-bottom: 24px;
+}
+
+.contratacaoSubtitulo {
+  font-family: 'Belleza', sans-serif;
+  font-size: 18px;
+  color: #555555; /* Detalhes em cinza */
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
+.contratacaoLista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contratacaoLista li {
+  font-family: 'Belleza', sans-serif;
+  font-size: 16px;
+  color: #333333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Ícone de visto dourado/bronze */
+.contratacaoLista i {
+  color: gray;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* --- BLOCO DIREITO (FORMULÁRIO) --- */
+.contratacaoForm {
+  flex: 1.5;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Grid inteligente para organizar os inputs em duas colunas */
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+/* Estilo de todos os campos de texto, select e textarea */
+.contratacaoForm input,
+.contratacaoForm select,
+.contratacaoForm textarea {
+  font-family: 'Belleza', sans-serif;
+  font-size: 15px;
+  padding: 14px;
+  border: 1px solid #dcdcdc; /* Borda cinza suave */
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  outline: none;
+  transition: border-color 0.2s ease;
+  width: 100%;
+}
+
+/* Efeito de foco quando o usuário clica no campo */
+.contratacaoForm input:focus,
+.contratacaoForm select:focus,
+.contratacaoForm textarea:focus {
+  border-color: #555555; /* Borda muda para cinza escuro ao focar */
+}
+
+/* Faz com que a caixa de mensagem ocupe as duas colunas inteiras sozinho */
+.formGrid textarea {
+  grid-column: span 2;
+  resize: vertical; /* Permite esticar apenas para baixo */
+}
+
+/* Botão de Envio */
+.botaoOrcamento {
+  font-family: 'Belleza', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: gray;
+  border: none;
+  border-radius: 6px;
+  padding: 16px;
+  cursor: pointer;
+  align-self: flex-start;
+  min-width: 250px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.botaoOrcamento:hover {
+  background-color: gray
+}
+
+.botaoOrcamento:active {
+  transform: scale(0.98);
+}
+
+/* Configuração Geral da Seção (Invertida para Fundo Preto) */
+.apoio-section {
+  padding: 60px 20px;
+  background-color: #000000; /* Fundo preto */
+  font-family: sans-serif;
+}
+
+.apoio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px; /* Espaço entre a imagem e o texto */
+}
+
+/* Estilização da Imagem */
+.apoio-imagem {
+  flex: 1;
+}
+
+.apoio-imagem img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+/* Estilização do Conteúdo (Texto e Botão) */
+.apoio-conteudo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.apoio-conteudo h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff; /* Letras brancas */
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.apoio-conteudo p {
+  font-size: 1.1rem;
+  color: #e0e0e0; /* Um branco ligeiramente suave para melhorar a leitura */
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Estilização do Botão da Vakinha (Agora com Fundo Branco e Letras Pretas) */
+.apoio-action {
+  display: flex;
+}
+
+.btn-apoie {
+  display: inline-block;
+  background-color: #ffffff; /* Botão branco */
+  color: #000000; /* Texto do botão preto */
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-apoie:hover {
+  background-color: #e0e0e0; /* Fica um cinza bem claro ao passar o mouse */
+}
+
+.btn-apoie:active {
+  transform: scale(0.98); /* Efeito de clique */
+}
+
+/* Estilização Geral do Footer */
+footer {
+  background: linear-gradient(to right, #000000, #333333);
+  padding: 25px 20px 15px 20px;
+  font-family: sans-serif;
+}
+
+/* Container Principal */
+.FooterContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Alinha a logo centralizada verticalmente com o bloco de botões */
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Bloco da Esquerda (Apenas a Logo) */
+.FooterBrand {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo {
+  max-width: 200px;
+  height: auto;
+  display: block;
+}
+
+/* Bloco da Direita (Instagram e E-mail empilhados) */
+.FooterInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espaço entre o botão do Instagram e o de E-mail */
+  align-items: flex-end; /* Alinha os botões à direita */
+}
+
+/* Estilo Base para os Botões Pílula (Insta e Email) */
+.InstaLink, .EmailLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 8px 18px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+/* Efeito Hover para os dois botões */
+.InstaLink:hover, .EmailLink:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+/* Parte Inferior dos Créditos */
+.FooterBottom {
+  max-width: 1200px;
+  margin: 15px auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #cccccc;
+}
+
+.FooterBottom p {
+  margin: 0;
+}
+
+.FooterBottom strong {
+  color: #ffffff;
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 768px) {
+  footer {
+    background: linear-gradient(to bottom, #000000, #333333);
+  }
+
+  .FooterContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .FooterInfo {
+    align-items: center; /* Centraliza os botões no celular */
+    width: 100%;
+  }
+  
+  .InstaLink, .EmailLink {
+    width: 100%; /* Faz os botões ocuparem a mesma largura no mobile, se preferir */
+    box-sizing: border-box;
+    justify-content: center;
+  }
+
+  .FooterBottom {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
+
+/* ==========================================================================
+   1. GRADIENT DO FOOTER PARA COMPUTADOR (E TELAS GERAIS)
+   ========================================================================== */
+footer {
+  /* Força o gradiente vertical (do topo ao fundo) igual ao do celular */
+  background: linear-gradient(to bottom, #000000, #333333) !important;
+  padding: 25px 20px 15px 20px;
+  font-family: sans-serif;
+}
+
+/* Estilo do botão hambúrguer (escondido no computador) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 1001;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: black;
+  transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   2. RESPONSIVIDADE & MENU HAMBÚRGUER (MOBILE)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex; /* Mostra o botão no celular */
+  }
+
+  /* Transforma o menu em uma tela que desliza/surge de cima */
+  .menuNavegacao {
+    display: none; /* Escondido por padrão */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    gap: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Classe que o JavaScript vai ativar para abrir o menu */
+  .menuNavegacao.active {
+    display: flex;
+  }
+
+  /* Animação do Hambúrguer virando um "X" quando ativo */
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Ajustes das outras seções para o mobile não quebrar */
+  .navegacao {
+    justify-content: space-between;
+    padding: 16px 24px;
+  }
+
+  .conteudoInicio {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding-bottom: 40px;
+  }
+
+  .conteudoInicioEscrito {
+    margin: 24px;
+    gap: 24px;
+  }
+
+  .conteudoInicioTitulo { font-size: 40px; }
+  .conteudoInicioSubtitulo { font-size: 24px; }
+  .conteudoInicioTexto { font-size: 18px; }
+
+  .botoesInicio { justify-content: center; }
+  .conteudoInicioBotaoConheca, .conteudoInicioContrate { width: 100%; }
+
+  .conteudoInicioImagem {
+    max-width: 100%;
+    height: 350px;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 85%, transparent 100%);
+  }
+
+  .sobre {
+    flex-direction: column;
+    padding: 60px 5%;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .sobreEstatisticas { width: 100%; min-width: auto; }
+  .professores { padding: 60px 5%; }
+  .professorCard { flex-direction: column; text-align: center; max-width: 100%; }
+  .galeriaItem { width: 280px; height: 180px; }
+
+  .contratacao {
+    flex-direction: column;
+    padding: 60px 5%;
+    gap: 40px;
+  }
+
+  .contratacaoInfo { max-width: 100%; text-align: center; }
+  .contratacaoLinha { margin: 0 auto 24px auto; }
+  .formGrid { grid-template-columns: 1fr; }
+  .formGrid textarea { grid-column: span 1; }
+  .botaoOrcamento { width: 100%; }
+
+  .apoio-container { flex-direction: column; gap: 30px; text-align: center; }
+  .apoio-action { justify-content: center; }
+  .btn-apoie { width: 100%; }
+
+  .FooterContent { flex-direction: column; text-align: center; gap: 20px; }
+  .FooterInfo { align-items: center; width: 100%; }
+  .InstaLink, .EmailLink { width: 100%; justify-content: center; }
+  .FooterBottom { flex-direction: column; gap: 8px; }
+}
