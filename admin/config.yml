@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: https://github.com/gisleneandradee/Orquestra_JovemCidadao
+  branch: main
+
+media_folder: "imagens/agenda"
+public_folder: "/imagens/agenda"
+
+collections:
+  - name: "agenda"
+    label: "Agenda"
+    folder: "_agenda" 
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Título do Show", name: "title", widget: "string" }
+      - { label: "Data e Horário", name: "date", widget: "datetime" }
+      - { label: "Local", name: "location", widget: "string" }
+      - { label: "Descrição", name: "body", widget: "text", required: false }
+      - { label: "Foto do Evento", name: "image", widget: "image" }
