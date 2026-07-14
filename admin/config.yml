@@ -1,0 +1,25 @@
+backend:
+  name: git-gateway
+  branch: main # Altere para 'master' se a sua branch principal do GitHub tiver esse nome
+
+media_folder: "Images" # Onde as novas imagens enviadas pelo painel serão salvas
+public_folder: "Images"
+
+collections:
+  - name: "dados_site"
+    label: "Dados do Site"
+    delete: false # Evita que o professor delete o arquivo sem querer
+    files:
+      - file: "data/agenda.json"
+        label: "Agenda de Eventos"
+        name: "agenda"
+        fields:
+          - name: eventos
+            label: "Eventos"
+            widget: list
+            summary: "{{fields.titulo}} - {{fields.data}}"
+            fields:
+              - { label: "Título do Evento", name: "titulo", widget: "string" }
+              - { label: "Data do Evento", name: "data", widget: "date", format: "YYYY-MM-DD", hint: "Selecione o dia no calendário" }
+              - { label: "Horário", name: "horario", widget: "string", placeholder: "Ex: 19h30" }
+              - { label: "Local (Endereço)", name: "local", widget: "string", placeholder: "Ex: Praça da Matriz, Franca, SP" }
