@@ -1,34 +1,10 @@
 {
   "eventos": [
     {
-      "titulo": "Teste 1",
+      "titulo": "Teste",
       "data": "2026-07-15",
-      "horario": "13h00",
-      "local": "Teste1"
-    },
-    {
-      "titulo": "Teste 2",
-      "data": "2026-07-15",
-      "horario": "15h00",
-      "local": "Teste 2"
-    },
-    {
-      "titulo": "Teste 3",
-      "data": "2026-07-15",
-      "horario": "16h00",
-      "local": "Teste 3"
-    },
-    {
-      "titulo": "Teste 4",
-      "data": "2026-07-15",
-      "horario": "17h00",
-      "local": "Teste 4"
-    },
-    {
-      "titulo": "Teste 5",
-      "data": "2026-07-15",
-      "horario": "18h00",
-      "local": "Teste 5"
+      "horario": "12h00",
+      "local": "Teste"
     }
   ]
 }
