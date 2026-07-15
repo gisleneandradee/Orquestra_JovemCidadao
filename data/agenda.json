@@ -11,6 +11,12 @@
       "horario": "12h00",
       "local": "Local Teste",
       "data": "2026-07-12"
+    },
+    {
+      "titulo": "Festa Jununa",
+      "data": "2026-07-31",
+      "horario": "15h00",
+      "local": "Escola teste"
     }
   ]
 }
