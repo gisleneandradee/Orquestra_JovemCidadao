@@ -3,12 +3,14 @@
     {
       "titulo": "Cultural ",
       "horario": "20/20/2020",
-      "local": "Endereço teste"
+      "local": "Endereço teste",
+      "data": "2026-07-07"
     },
     {
       "titulo": "Evento teste",
-      "horario": "Data e horario teste",
-      "local": "Local Teste"
+      "horario": "12h00",
+      "local": "Local Teste",
+      "data": "2026-07-12"
     }
   ]
 }
