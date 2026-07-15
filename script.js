@@ -10,7 +10,6 @@ if (menuToggle && menuNavegacao) {
     menuNavegacao.classList.toggle("active");
   });
 
-  // Fecha o menu ao clicar em qualquer link (melhor usabilidade)
   const linksNavegacao = document.querySelectorAll(".menuNavegacaoItem");
   linksNavegacao.forEach(link => {
     link.addEventListener("click", () => {
@@ -42,7 +41,6 @@ async function carregarAgenda() {
   if (!agendaContainer) return;
 
   try {
-    // Caminho para o JSON que o Netlify CMS vai gerar na pasta do projeto
     const resposta = await fetch("/data/agenda.json");
     if (!resposta.ok) throw new Error("Erro ao carregar o arquivo da agenda.");
     
@@ -54,12 +52,9 @@ async function carregarAgenda() {
       return;
     }
 
-    // Limpa o container antes de renderizar os novos itens
     agendaContainer.innerHTML = "";
 
-    // Renderiza cada evento respeitando a sua estrutura de classes do CSS
     eventos.forEach(evento => {
-      // Divide a data (ex: "2026-07-14") para extrair Dia e Mês formatado
       const dataObj = new Date(evento.data + "T00:00:00");
       const dia = dataObj.getDate().toString().padStart(2, '0');
       const mes = dataObj.toLocaleDateString("pt-BR", { month: "short" }).toUpperCase().replace(".", "");
@@ -93,5 +88,4 @@ async function carregarAgenda() {
 // ==========================================
 document.addEventListener("DOMContentLoaded", () => {
   carregarAgenda();
-  // Aqui também podemos inicializar a função da galeria assim que estruturarmos o JSON dela!
 });

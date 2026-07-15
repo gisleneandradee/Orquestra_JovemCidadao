@@ -1,39 +1,17 @@
 backend:
   name: git-gateway
-  branch: main # Altere para 'master' se a sua branch principal do GitHub tiver esse nome
+  branch: main
 
-media_folder: "Images" # Onde as fotos enviadas pelo painel serão salvas
-public_folder: "Images"
+media_folder: "Images"
+public_folder: "/Images"
 
 collections:
-  - name: "dados_site"
-    label: "Dados do Site"
-    delete: false
-    files:
-      # 1. COLEÇÃO DA AGENDA (COM CALENDÁRIO CORRIGIDO)
-      - file: "data/agenda.json"
-        label: "Agenda de Eventos"
-        name: "agenda"
-        fields:
-          - name: eventos
-            label: "Eventos"
-            widget: list
-            summary: "{{fields.titulo}} - {{fields.data}}"
-            fields:
-              - { label: "Título do Evento", name: "titulo", widget: "string" }
-              - { label: "Data do Evento", name: "data", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false, required: true, hint: "Clique para abrir o calendário e selecionar o dia" }
-              - { label: "Horário", name: "horario", widget: "string", placeholder: "Ex: 19h30" }
-              - { label: "Local (Endereço)", name: "local", widget: "string", placeholder: "Ex: Praça da Matriz, Franca, SP" }
-
-      # 2. COLEÇÃO DA GALERIA (PARA ADICIONAR E REMOVER FOTOS)
-      - file: "data/galeria.json"
-        label: "Galeria de Fotos"
-        name: "galeria"
-        fields:
-          - name: fotos
-            label: "Fotos da Galeria"
-            widget: list
-            summary: "{{fields.legenda}}"
-            fields:
-              - { label: "Imagem", name: "imagem", widget: "image", required: true, hint: "Envie ou selecione uma imagem para a galeria" }
-              - { label: "Legenda / Descrição da Imagem", name: "legenda", widget: "string", required: true, placeholder: "Ex: Apresentação na Catedral" }
+  - name: "agenda"
+    label: "Agenda de Eventos"
+    folder: "_agenda"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Título do Evento", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime" }
+      - { label: "Local", name: "location", widget: "string" }
