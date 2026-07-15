@@ -1,8 +1,8 @@
 backend:
   name: git-gateway
-  branch: main # Altere para 'master' se a sua branch principal do GitHub tiver esse nome
+  branch: main
 
-media_folder: "Images" # Onde as fotos enviadas pelo painel serão salvas
+media_folder: "Images"
 public_folder: "Images"
 
 collections:
@@ -22,5 +22,5 @@ collections:
             fields:
               - { label: "Título do Evento", name: "titulo", widget: "string" }
               - { label: "Data do Evento", name: "data", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false, required: true, hint: "Clique para abrir o calendário e selecionar o dia" }
-              - { label: "Horário", name: "horario", widget: "string", placeholder: "Ex: 19h30" }
+              - { label: "Horário", name: "horario", widget: "datetime", format: "HH:mm", date_format: false, time_format: "HH:mm", required: true, hint: "Clique para selecionar a hora do evento" }
               - { label: "Local (Endereço)", name: "local", widget: "string", placeholder: "Ex: Praça da Matriz, Franca, SP" }
