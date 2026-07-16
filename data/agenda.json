@@ -1,3 +1,10 @@
 {
-  "eventos": []
+  "eventos": [
+    {
+      "titulo": "teste",
+      "data": "2026-07-16",
+      "horario": "10:35",
+      "local": "teste"
+    }
+  ]
 }
