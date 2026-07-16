@@ -1,8 +1,10 @@
 {
   "fotos": [
     {
-      "imagem": "https://static.vecteezy.com/ti/fotos-gratis/t2/68964462-uma-vibrante-beija-flor-dentro-voo-alimentando-a-partir-de-uma-brilhante-vermelho-flor-agua-gotas-adicionar-para-a-imagem-foto.jpg",
-      "legenda": "Apresentação orquestra"
+      "imagem": "/Images/imagemgaleria2.jpeg"
+    },
+    {
+      "imagem": "/Images/videogaleria1.mp4"
     }
   ]
 }
