@@ -3,7 +3,7 @@ backend:
   branch: main
 
 media_folder: "Images"
-public_folder: "Images"
+public_folder: "/Images"
 
 collections:
   - name: "dados_site"
@@ -24,3 +24,28 @@ collections:
               - { label: "Data do Evento", name: "data", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false, required: true, hint: "Clique para abrir o calendário e selecionar o dia" }
               - { label: "Horário", name: "horario", widget: "datetime", format: "HH:mm", date_format: false, time_format: "HH:mm", required: true, hint: "Clique para selecionar a hora do evento" }
               - { label: "Local (Endereço)", name: "local", widget: "string", placeholder: "Ex: Praça da Matriz, Franca, SP" }
+
+      # 2. COLEÇÃO DA GALERIA (FOTOS E VÍDEOS)
+      - file: "data/galeria.json"
+        label: "Galeria de Fotos e Vídeos"
+        name: "galeria"
+        fields:
+          - name: fotos
+            label: "Mídias da Galeria"
+            widget: list
+            summary: "{{fields.legenda}}"
+            fields:
+              - { 
+                  label: "Arquivo de Mídia (Foto ou Vídeo)", 
+                  name: "imagem", 
+                  widget: "image", 
+                  required: true,
+                  hint: "Envie fotos (.jpg, .png) ou vídeos curtos (.mp4, .mov) no formato vertical (9:16)"
+                }
+              - { 
+                  label: "Legenda / Descrição", 
+                  name: "legenda", 
+                  widget: "string", 
+                  required: false, 
+                  placeholder: "Ex: Apresentação de Natal 2025" 
+                }

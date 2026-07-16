@@ -84,8 +84,82 @@ async function carregarAgenda() {
 }
 
 // ==========================================
-// INICIALIZAÇÃO
+// 4. CARREGAMENTO DINÂMICO DO CARROSSEL (GALERIA)
+// ==========================================
+function ehVideo(url) {
+  if (!url) return false;
+  const extensoesVideo = ['.mp4', '.webm', '.ogg', '.mov', '.quicktime'];
+  return extensoesVideo.some(extensao => url.toLowerCase().endsWith(extensao));
+}
+
+async function inicializarCarrossel() {
+  const container = document.getElementById('galeria-container');
+  if (!container) return;
+
+  try {
+    // Busca os dados salvos pelo Netlify CMS
+    const resposta = await fetch('/data/galeria.json');
+    if (!resposta.ok) throw new Error('Erro ao carregar os dados da galeria.');
+    
+    const dados = await resposta.json();
+    const fotos = dados.fotos || [];
+
+    container.innerHTML = '';
+
+    if (fotos.length === 0) {
+      container.innerHTML = '<p style="text-align:center; width:100%; color: #fff;">Nenhuma mídia cadastrada na galeria.</p>';
+      return;
+    }
+
+    // Cria os slides dinamicamente
+    fotos.forEach(item => {
+      const slide = document.createElement('div');
+      slide.className = 'carrossel-slide';
+
+      let caminhoMidia = item.imagem;
+      if (caminhoMidia && !caminhoMidia.startsWith('/')) {
+        caminhoMidia = '/' + caminhoMidia;
+      }
+
+      // Verifica se é vídeo ou imagem e aplica as tags corretas
+      if (ehVideo(caminhoMidia)) {
+        const video = document.createElement('video');
+        video.src = caminhoMidia;
+        video.autoplay = true;
+        video.loop = true;
+        video.muted = true; // Necessário para permitir autoplay na maioria dos navegadores
+        video.playsInline = true; 
+        video.setAttribute('preload', 'metadata');
+        slide.appendChild(video);
+      } else {
+        const img = document.createElement('img');
+        img.src = caminhoMidia;
+        img.alt = item.legenda || 'Apresentação Orquestra';
+        img.loading = 'lazy';
+        slide.appendChild(img);
+      }
+
+      // Adiciona legenda caso exista
+      if (item.legenda) {
+        const legenda = document.createElement('p');
+        legenda.className = 'carrossel-legenda';
+        legenda.textContent = item.legenda;
+        slide.appendChild(legenda);
+      }
+
+      container.appendChild(slide);
+    });
+
+  } catch (erro) {
+    console.error('Erro na galeria:', erro);
+    container.innerHTML = '<p style="text-align:center; width:100%; color: #fff;">Erro ao carregar as mídias.</p>';
+  }
+}
+
+// ==========================================
+// INICIALIZAÇÃO GERAL DO DOM
 // ==========================================
 document.addEventListener("DOMContentLoaded", () => {
   carregarAgenda();
+  inicializarCarrossel();
 });

@@ -12,6 +12,7 @@ body {
   font-family: "Belleza", sans-serif;
 }
 
+/* --- Navegação --- */
 .navegacao {
   position: absolute;
   top: 0;
@@ -37,7 +38,6 @@ body {
 }
 
 .menuNavegacaoItem {
-  font-family: "Belleza", sans-serif;
   font-size: 18px;
   font-weight: 400;
   color: #000000;
@@ -51,9 +51,7 @@ body {
   color: #ffffff;
   background: #000000;
   border-radius: 50px;
-  transition:
-    background-color 0.3s ease,
-    transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .navegacaoBotao:hover {
@@ -65,6 +63,7 @@ body {
   padding-top: 48px;
 }
 
+/* --- Seção Início --- */
 .conteudoInicio {
   display: flex;
   flex-direction: row;
@@ -82,21 +81,18 @@ body {
 }
 
 .conteudoInicioTitulo {
-  font-family: "Belleza", sans-serif;
   font-size: 64px;
   font-weight: 400;
   color: #ffffff;
 }
 
 .conteudoInicioSubtitulo {
-  font-family: "Belleza", sans-serif;
   font-size: 32px;
   font-weight: 400;
   color: #ffffff;
 }
 
 .conteudoInicioTexto {
-  font-family: "Belleza", sans-serif;
   font-size: 24px;
   font-weight: 200;
   color: #ffffff;
@@ -112,7 +108,6 @@ body {
 .conteudoInicioBotaoConheca,
 .conteudoInicioContrate {
   padding: 15px 35px;
-  font-family: "Belleza", sans-serif;
   font-size: 20px;
   font-weight: 400;
   color: #000000;
@@ -120,9 +115,7 @@ body {
   background-color: #ffffff;
   border: none;
   border-radius: 20px;
-  transition:
-    background-color 0.2s ease,
-    transform 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .conteudoInicioBotaoConheca:hover,
@@ -146,6 +139,7 @@ body {
   -webkit-mask-composite: source-in;
 }
 
+/* --- Sobre --- */
 .sobre {
   display: flex;
   flex-direction: row;
@@ -163,12 +157,10 @@ body {
 
 .sobreConteudoTitulo {
   margin-bottom: 24px;
-  font-family: "Belleza", sans-serif;
   font-size: 36px;
 }
 
 .sobreConteudoTexto {
-  font-family: "Belleza", sans-serif;
   font-size: 18px;
   line-height: 1.6;
   color: #484d50;
@@ -200,18 +192,17 @@ body {
 }
 
 .estatisticaNumero {
-  font-family: "Belleza", sans-serif;
   font-size: 32px;
   font-weight: bold;
   color: #000000;
 }
 
 .estatisticaTexto {
-  font-family: "Belleza", sans-serif;
   font-size: 16px;
   color: #484d50;
 }
 
+/* --- Professores --- */
 .professores {
   padding: 60px 10%;
   text-align: center;
@@ -220,7 +211,6 @@ body {
 
 .professoresTitulo {
   margin-bottom: 8px;
-  font-family: "Belleza", sans-serif;
   font-size: 36px;
   color: #ffffff;
 }
@@ -272,21 +262,18 @@ body {
 }
 
 .professorNome {
-  font-family: "Belleza", sans-serif;
   font-size: 22px;
   font-weight: bold;
   color: #ffffff;
 }
 
 .professorInstrumento {
-  font-family: "Belleza", sans-serif;
   font-size: 16px;
   font-weight: 500;
   color: #808080;
 }
 
 .professorBio {
-  font-family: "Belleza", sans-serif;
   font-size: 14px;
   line-height: 1.4;
   color: #666666;
@@ -308,6 +295,7 @@ body {
   color: #808080;
 }
 
+/* --- Agenda --- */
 .agenda {
   padding: 60px 5%;
   text-align: center;
@@ -316,7 +304,6 @@ body {
 
 .agendaTitulo {
   margin-bottom: 8px;
-  font-family: "Belleza", sans-serif;
   font-size: 36px;
   color: #1a1a1a;
 }
@@ -363,7 +350,6 @@ body {
 }
 
 .eventoDia {
-  font-family: "Belleza", sans-serif;
   font-size: 24px;
   font-weight: bold;
   line-height: 1;
@@ -372,7 +358,6 @@ body {
 
 .eventoMes {
   margin-top: 4px;
-  font-family: "Belleza", sans-serif;
   font-size: 12px;
   font-weight: bold;
   color: #555555;
@@ -385,7 +370,6 @@ body {
 }
 
 .eventoNome {
-  font-family: "Belleza", sans-serif;
   font-size: 16px;
   font-weight: bold;
   color: #1a1a1a;
@@ -395,7 +379,6 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-family: "Belleza", sans-serif;
   font-size: 14px;
   color: #666666;
 }
@@ -405,91 +388,96 @@ body {
   color: #888888;
 }
 
-.galeria {
+/* --- Nova Seção do Carrossel --- */
+.secao-carrossel {
   padding: 60px 0;
   text-align: center;
   background-color: #000000;
 }
 
-.galeriaTitulo {
-  margin-bottom: 8px;
-  font-family: "Belleza", sans-serif;
+.secao-carrossel h2 {
+  margin-bottom: 24px;
   font-size: 36px;
   color: #ffffff;
 }
 
-.galeriaLinha {
-  width: 50px;
-  height: 2px;
-  margin: 0 auto 40px auto;
-  background-color: #555555;
+.carrossel-container {
+  max-width: 100%;
+  overflow: hidden;
 }
 
-.galeriaCarrossel{
-    display:flex;
-    gap:24px;
-    padding:15px 5% 25px;
-
-    overflow-x:auto;
-
-    scroll-behavior:smooth;
-
-    scroll-snap-type:x mandatory;
+.carrossel-slides {
+  display: flex;
+  gap: 24px;
+  padding: 15px 5% 25px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
 }
 
-.galeriaCarrossel::-webkit-scrollbar {
+/* Scrollbar estilizada */
+.carrossel-slides::-webkit-scrollbar {
   height: 8px;
 }
 
-.galeriaCarrossel::-webkit-scrollbar-track {
+.carrossel-slides::-webkit-scrollbar-track {
   background: #1a1a1a;
 }
 
-.galeriaCarrossel::-webkit-scrollbar-thumb {
+.carrossel-slides::-webkit-scrollbar-thumb {
   background: #555555;
   border-radius: 10px;
 }
 
-.galeriaItem {
+.carrossel-slide {
   flex: 0 0 auto;
   scroll-snap-align: start;
-
   width: 240px;
   aspect-ratio: 9 / 16;
-
   overflow: hidden;
-
   border-radius: 18px;
-
   border: 2px solid #222;
-
   background: #111;
-
-  box-shadow: 0 10px 25px rgba(0,0,0,.35);
-
-  transition: transform .3s ease,
-              box-shadow .3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .35);
+  transition: transform .3s ease, box-shadow .3s ease;
+  position: relative;
 }
 
-.galeriaItem img,
-.galeriaItem video{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-    transition:.35s;
+/* Aplica o comportamento perfeito para fotos e vídeos */
+.carrossel-slide img,
+.carrossel-slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: .35s;
 }
 
-.galeriaItem:hover{
-    transform:translateY(-8px);
-    box-shadow:0 18px 35px rgba(0,0,0,.45);
+.carrossel-slide:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, .45);
 }
 
-.galeriaItem:hover img,
-.galeriaItem:hover video{
-    transform:scale(1.05);
+.carrossel-slide:hover img,
+.carrossel-slide:hover video {
+  transform: scale(1.05);
 }
 
+/* Legendas do Carrossel */
+.carrossel-legenda {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+  backdrop-filter: blur(2px);
+}
+
+/* --- Contratação --- */
 .contratacao {
   display: flex;
   flex-direction: row;
@@ -508,7 +496,6 @@ body {
 
 .contratacaoTitulo {
   margin-bottom: 8px;
-  font-family: "Belleza", sans-serif;
   font-size: 36px;
   color: #1a1a1a;
 }
@@ -522,7 +509,6 @@ body {
 
 .contratacaoSubtitulo {
   margin-bottom: 24px;
-  font-family: "Belleza", sans-serif;
   font-size: 18px;
   font-weight: 500;
   color: #555555;
@@ -539,7 +525,6 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: "Belleza", sans-serif;
   font-size: 16px;
   color: #333333;
 }
@@ -569,7 +554,6 @@ body {
 .contratacaoForm textarea {
   width: 100%;
   padding: 14px;
-  font-family: "Belleza", sans-serif;
   font-size: 15px;
   color: #1a1a1a;
   outline: none;
@@ -594,7 +578,6 @@ body {
   align-self: flex-start;
   min-width: 250px;
   padding: 16px;
-  font-family: "Belleza", sans-serif;
   font-size: 16px;
   font-weight: bold;
   letter-spacing: 1px;
@@ -604,22 +587,20 @@ body {
   background-color: #808080;
   border: none;
   border-radius: 6px;
-  transition:
-    background-color 0.2s ease,
-    transform 0.1s ease;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 .botaoOrcamento:hover {
-  background-color: #808080;
+  background-color: #666666;
 }
 
 .botaoOrcamento:active {
   transform: scale(0.98);
 }
 
+/* --- Apoio --- */
 .apoio-section {
   padding: 60px 20px;
-  font-family: sans-serif;
   background-color: #000000;
 }
 
@@ -675,12 +656,9 @@ body {
   font-size: 1.1rem;
   font-weight: bold;
   color: #000000;
-  text-decoration: none;
   background-color: #ffffff;
   border-radius: 4px;
-  transition:
-    background-color 0.2s ease,
-    transform 0.1s ease;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 .btn-apoie:hover {
@@ -691,9 +669,9 @@ body {
   transform: scale(0.98);
 }
 
+/* --- Footer --- */
 footer {
   padding: 25px 20px 15px 20px;
-  font-family: sans-serif;
   background: linear-gradient(to bottom, #000000, #333333) !important;
 }
 
@@ -735,8 +713,6 @@ footer {
   font-size: 0.9rem;
   font-weight: 500;
   color: #ffffff;
-  text-decoration: none;
-  background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
   transition: all 0.2s ease;
@@ -786,6 +762,7 @@ footer {
   transition: all 0.3s ease;
 }
 
+/* --- Media Queries (Responsividade) --- */
 @media (max-width: 768px) {
   footer {
     background: linear-gradient(to bottom, #000000, #333333);
@@ -926,8 +903,9 @@ footer {
     text-align: center;
   }
 
-  .galeriaItem{
-    width:180px;
+  /* Redimensionamento responsivo do novo slide */
+  .carrossel-slide {
+    width: 180px;
   }
 
   .contratacao {
