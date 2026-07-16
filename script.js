@@ -163,3 +163,37 @@ document.addEventListener("DOMContentLoaded", () => {
   carregarAgenda();
   inicializarCarrossel();
 });
+
+// ==========================================
+// 5. COPIAR E-MAIL NO CELULAR
+// ==========================================
+const emailBotao = document.querySelector(".EmailLink");
+
+if (emailBotao) {
+  emailBotao.addEventListener("click", (e) => {
+    // Detecta se é um dispositivo móvel básico
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    if (isMobile) {
+      e.preventDefault(); // Impede o comportamento padrão do mailto
+      
+      const email = "seu-email@dominio.com"; // Substitua pelo e-mail do projeto
+      
+      navigator.clipboard.writeText(email).then(() => {
+        // Altera temporariamente o texto do botão para dar um feedback visual
+        const textoOriginal = emailBotao.innerHTML;
+        emailBotao.innerHTML = '<i class="ph ph-check"></i> E-mail copiado!';
+        emailBotao.style.backgroundColor = "#008000";
+        emailBotao.style.color = "#ffffff";
+        
+        setTimeout(() => {
+          emailBotao.innerHTML = textoOriginal;
+          emailBotao.style.backgroundColor = "transparent";
+          emailBotao.style.color = "#ffffff";
+        }, 2000);
+      }).catch(err => {
+        console.error("Erro ao copiar e-mail: ", err);
+      });
+    }
+  });
+}
